@@ -1,0 +1,42 @@
+{
+  "01_clean_eligible.pdf": {
+    "expected_verdict": "LIKELY_ELIGIBLE",
+    "expected_flags": "No issues"
+  },
+  "02_age_out_of_range.pdf": {
+    "expected_verdict": "LIKELY_INELIGIBLE",
+    "expected_flags": "INCLUSION_CRITERION_FAILED (age <= 75)"
+  },
+  "03_low_egfr.pdf": {
+    "expected_verdict": "LIKELY_INELIGIBLE",
+    "expected_flags": "INCLUSION_CRITERION_FAILED (eGFR >= 30)"
+  },
+  "04_consent_not_signed.pdf": {
+    "expected_verdict": "LIKELY_INELIGIBLE",
+    "expected_flags": "CONSENT_NOT_SIGNED"
+  },
+  "05_consent_after_screening.pdf": {
+    "expected_verdict": "LIKELY_INELIGIBLE",
+    "expected_flags": "CONSENT_AFTER_SCREENING"
+  },
+  "06_pregnant_exclusion.pdf": {
+    "expected_verdict": "LIKELY_INELIGIBLE",
+    "expected_flags": "PREGNANCY_EXCLUSION"
+  },
+  "07_recent_excluded_therapy.pdf": {
+    "expected_verdict": "LIKELY_INELIGIBLE",
+    "expected_flags": "INCLUSION_CRITERION_FAILED (washout >= 30 days not met — stopped 5 days ago)"
+  },
+  "08_missing_irb_ref.pdf": {
+    "expected_verdict": "NEEDS_REVIEW",
+    "expected_flags": "IRB_REF_MISSING (warning only)"
+  },
+  "09_borderline_remission_history.pdf": {
+    "expected_verdict": "NEEDS_REVIEW",
+    "expected_flags": "Borderline via RAG (prior malignancy remission window)"
+  },
+  "10_scanned_clean.png": {
+    "expected_verdict": "LIKELY_ELIGIBLE",
+    "expected_flags": "OCR path test"
+  }
+}
